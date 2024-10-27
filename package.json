@@ -1,0 +1,16 @@
+{
+  "name": "jasa-desain-album",
+  "version": "1.0.0",
+  "description": "jasa desain album",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kimi Lorenzo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  }
+}
