@@ -6,7 +6,7 @@
 ## Halaman:
   - Home page
   - About page
-  - ### Portfolio page:
+  - #### Portfolio page:
     - Wedding
     - Birthday
     - Event
