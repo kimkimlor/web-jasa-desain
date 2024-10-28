@@ -1,0 +1,25 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200vh; /* Tinggi halaman diperpanjang untuk scroll */
+}
+
+.content {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.animate-text {
+  opacity: 0; /* Awal teks tidak terlihat */
+  transform: translateY(20px); /* Teks sedikit turun */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.animate-text.show {
+  opacity: 1; /* Teks terlihat */
+  transform: translateY(0); /* Teks kembali ke posisi normal */
+}

@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.sidebar {
+  width: 200px;
+  float: left;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  transition: all 0.5s ease;
+}
+.main {
+  margin-left: 220px;
+  padding: 10px;
+  background-color: white;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+li {
+  margin: 10px;
+}
+.sidebar:hover {
+  background-color: #2e2d2d;
+}
+.sidebar h1 {
+  padding: 10px;
+}
+
+.act {
+  opacity: 0.5;
+}
+/* Gaya untuk dropdown */
+/* Gaya untuk dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  margin: 10px;
+  background-color: #000000; /* Warna tombol */
+  color: white; /* Warna teks */
+  padding: 10px 16px; /* Padding */
+  font-size: 24px; /* Ukuran font untuk simbol garis tiga */
+  border: none; /* Tanpa border */
+  cursor: pointer; /* Pointer cursor */
+}
+
+/* Konten dropdown yang tersembunyi */
+.dropdown-content {
+  display: none; /* Awalnya tersembunyi */
+  position: absolute; /* Posisi absolut */
+  background-color: #1e1d1d; /* Warna latar belakang */
+  min-width: 160px; /* Lebar minimum */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Bayangan */
+  z-index: 1; /* Menjaga agar di atas elemen lainnya */
+}
+
+/* Gaya tautan dalam dropdown */
+.dropdown-content a {
+  color: rgb(255, 255, 255); /* Warna teks */
+  padding: 12px 16px; /* Padding */
+  text-decoration: none; /* Tanpa garis bawah */
+  display: block; /* Menampilkan sebagai blok */
+}
+
+/* Gaya saat hover */
+.dropdown-content a:hover {
+  background-color: #191818; /* Warna latar belakang saat hover */
+}
+
+/* Menampilkan konten dropdown saat hover */
+.dropdown:hover .dropdown-content {
+  display: block; /* Menampilkan konten saat hover */
+}
+

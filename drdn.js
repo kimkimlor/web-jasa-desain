@@ -1,15 +1,18 @@
-// Ambil elemen tombol dropdown
-const dropbtn = document.querySelector('.dropbtn');
-const dropdownContent = document.querySelector('.dropdown-content');
+// script.js
+function fadeInOnScroll() {
+    const elements = document.querySelectorAll('.fade-in');
+    elements.forEach(element => {
+        const rect = element.getBoundingClientRect();
+        
+        // Cek apakah elemen berada dalam viewport
+        if (rect.top < window.innerHeight - 100 && rect.bottom > 100) {
+            element.classList.add('show'); // Tambahkan kelas show jika elemen dalam viewport
+        } else {
+            element.classList.remove('show'); // Hapus kelas show jika elemen di luar viewport
+        }
+    });
+}
 
-// Tambahkan event listener untuk mengklik tombol
-dropbtn.addEventListener('mouseover', function() {
-    dropdownContent.classList.toggle('show'); // Menampilkan atau menyembunyikan konten
-});
-
-// Menyembunyikan dropdown jika pengguna mengklik di luar
-window.addEventListener('mouseover', function(event) {
-    if (!event.target.matches('.dropbtn') && !event.target.matches('.dropdown-content')) {
-        dropdownContent.classList.remove('show');
-    }
-});
+// Panggil fungsi saat halaman dimuat untuk elemen yang ada di viewport langsung muncul
+window.addEventListener('load', fadeInOnScroll);
+window.addEventListener('scroll', fadeInOnScroll);
