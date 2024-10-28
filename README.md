@@ -1,2 +1,13 @@
-ini adalah proyek web pertama saya.
-Ini adalah proyek web untuk jasa desain album wedding, event, dan birthday
+# Jasa Desain Album
+## Keterangan:
+  1. Ini adalah proyek website pertama saya untuk bisnis keluarga.
+  2. Ini juga adalah proyek serius pertama saya.
+
+## Halaman:
+  - Home page
+  - About page
+  - ### Portfolio page:
+    - Wedding
+    - Birthday
+    - Event
+  - Contact page
