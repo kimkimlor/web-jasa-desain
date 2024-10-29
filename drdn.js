@@ -16,3 +16,14 @@ function fadeInOnScroll() {
 // Panggil fungsi saat halaman dimuat untuk elemen yang ada di viewport langsung muncul
 window.addEventListener('load', fadeInOnScroll);
 window.addEventListener('scroll', fadeInOnScroll);
+
+const dropdown = document.querySelector('.dropdown');
+const dropdownContent = document.querySelector('.dropdown-content');
+
+dropdown.addEventListener('mouseenter', () => {
+    dropdownContent.classList.remove('hide'); // Tampilkan dropdown
+});
+
+dropdown.addEventListener('mouseleave', () => {
+    dropdownContent.classList.add('hide'); // Sembunyikan dropdown
+});

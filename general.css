@@ -12,8 +12,10 @@ body {
   position: fixed; /* Tetap di posisi kiri layar */
   top: 0; /* Mulai dari atas */
   left: 0; /* Posisi kiri */
+  opacity: 90%;
 }
 .main {
+  margin-top: 40px;
   margin-left: 220px;
   padding: 10px;
   background-color: white;
@@ -38,7 +40,7 @@ li {
   background-color: #2e2d2d;
 }
 .sidebar h1 {
-  padding: 10px;
+  margin: 10px;
 }
 
 .act {
@@ -62,12 +64,17 @@ li {
 
 .dropdown-content {
   margin-left: 220px;
-  display: none; /* Initially hidden */
+  visibility: hidden; /* Tersembunyi */
+  opacity: 0;
   position: absolute;
   background-color: #1e1d1d;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  
+  /* Animasi untuk opacity dan transform */
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .dropdown-content a {
@@ -81,13 +88,23 @@ li {
   background-color: #191818;
 }
 
+/* Saat dropdown di-hover */
 .dropdown:hover .dropdown-content {
-  display: block;
+  visibility: visible;
+  opacity: 1; /* Opacity untuk efek fade-in */
+  transform: translateY(0); /* Kembali ke posisi awal */
 }
+/* Efek saat tidak di-hover */
+.dropdown-content.hide {
+  visibility: hidden; /* Tersembunyi */
+  opacity: 0; /* Transparan */
+  transform: translateY(-20px); /* Geser sedikit ke atas */
+}
+
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: all 0.6s ease-in, transform 0.6s ease-out;
 }
 
 .fade-in.show {
