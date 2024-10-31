@@ -46,6 +46,7 @@ li {
 .act {
   opacity: 0.5;
 }
+
 /* Dropdown styles */
 .dropdown {
   position: relative;
@@ -71,7 +72,7 @@ li {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  
+
   /* Animasi untuk opacity dan transform */
   transform: translateY(-20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -93,12 +94,7 @@ li {
   visibility: visible;
   opacity: 1; /* Opacity untuk efek fade-in */
   transform: translateY(0); /* Kembali ke posisi awal */
-}
-/* Efek saat tidak di-hover */
-.dropdown-content.hide {
-  visibility: hidden; /* Tersembunyi */
-  opacity: 0; /* Transparan */
-  transform: translateY(-20px); /* Geser sedikit ke atas */
+  transition: all 0.5s ease;
 }
 
 .fade-in {

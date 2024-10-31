@@ -1,4 +1,4 @@
-// script.js
+// Fungsi untuk menambahkan animasi fade-in saat elemen muncul di viewport
 function fadeInOnScroll() {
     const elements = document.querySelectorAll('.fade-in');
     elements.forEach(element => {
@@ -21,9 +21,9 @@ const dropdown = document.querySelector('.dropdown');
 const dropdownContent = document.querySelector('.dropdown-content');
 
 dropdown.addEventListener('mouseenter', () => {
-    dropdownContent.classList.remove('hide'); // Tampilkan dropdown
+  dropdownContent.classList.remove('hide'); // Tampilkan dropdown
 });
 
 dropdown.addEventListener('mouseleave', () => {
-    dropdownContent.classList.add('hide'); // Sembunyikan dropdown
+  dropdownContent.classList.add('hide'); // Sembunyikan dropdown
 });
