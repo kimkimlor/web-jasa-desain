@@ -61,6 +61,7 @@ li {
   font-size: 24px; /* Font size for menu button */
   border: none; /* No border */
   cursor: pointer; /* Pointer cursor */
+  border-radius: 10px;
 }
 
 .dropdown-content {

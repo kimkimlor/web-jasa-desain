@@ -2,6 +2,7 @@ import express from "express";
 import session from "express-session";
 import path from "path";
 import { fileURLToPath } from "url";
+import bodyParser from "body-parser";
 
 // Dapatkan __dirname menggunakan import.meta.url
 const __filename = fileURLToPath(import.meta.url);
@@ -9,7 +10,8 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const port = 3000;
-const tokens = "1234#$_jasa_$_desain_$_album";
+app.use(bodyParser.json());
+let token;
 
 app.use(
   session({
@@ -38,6 +40,8 @@ function home(req, res) {
       '<h1>Welcome to our site!</h1><p>You have not visited before. <a href="/">Click here to continue to the main page.</a></p>'
     );
   }
+  token = "$_jasa_$_desain_$_album_$_wedding_$$_#1234";
+  console.log(token);
 }
 
 // Fungsi untuk rute lainnya
@@ -77,15 +81,16 @@ function notFound(req, res) {
 }
 
 function auth(req, res, next) {
-  if (req.session.token === tokens) {
+  const authHeader = req.headers["$_jasa_$_desain_$_album_$_wedding_$$1234"];
+  if (authHeader === `Bearer ${token}`) {
     next();
   } else {
-    res.status(403).send("Unauthorized");
+    res.status(401).send("Unauthorized");
   }
 }
 
 // Rute yang valid
-app.get("/", home);
+app.get("/", auth, home);
 app.get("/about", about);
 app.get("/portfolio", portfolio);
 app.get("/contact", contact);
