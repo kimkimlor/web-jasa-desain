@@ -88,6 +88,12 @@ li {
 .dropdown-content a:hover {
   background-color: #191818;
 }
+.dropdown-content .hide {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
 
 /* Saat dropdown di-hover */
 .dropdown:hover .dropdown-content {
