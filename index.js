@@ -83,6 +83,7 @@ function notFound(req, res) {
 function auth(req, res, next) {
   const authHeader = req.headers["$_jasa_$_desain_$_album_$_wedding_$$1234"];
   if (authHeader === `Bearer ${token}`) {
+    console.log(token);
     next();
   } else {
     res.status(401).send("Unauthorized");
@@ -90,7 +91,7 @@ function auth(req, res, next) {
 }
 
 // Rute yang valid
-app.get("/", auth, home);
+app.get("/", home);
 app.get("/about", about);
 app.get("/portfolio", portfolio);
 app.get("/contact", contact);

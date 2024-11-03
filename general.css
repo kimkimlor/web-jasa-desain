@@ -66,6 +66,7 @@ li {
 
 .dropdown-content {
   margin-left: 220px;
+  margin-top: 7px;
   visibility: hidden; /* Tersembunyi */
   opacity: 0;
   position: absolute;
@@ -73,10 +74,26 @@ li {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  border-radius: 10px;
 
   /* Animasi untuk opacity dan transform */
   transform: translateY(-20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: all 0.2s ease, transform 0.5s ease;
+}
+
+.dropdown-content::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* tetap posisi di atas konten dropdown */
+  left: calc(
+    50% - 53px
+  ); /* geser 29px (20px + 9px) ke kiri dari posisi tengah */
+  transform: translateX(-50%); /* untuk meratakan posisi segitiga */
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #1e1d1d; /* warna segitiga sesuai dengan background dropdown */
 }
 
 .dropdown-content a {
@@ -88,12 +105,13 @@ li {
 
 .dropdown-content a:hover {
   background-color: #191818;
+  border-radius: 10px;
 }
 .dropdown-content .hide {
   display: none;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.5s ease;
+  transition: all 0.2s ease;
 }
 
 /* Saat dropdown di-hover */
