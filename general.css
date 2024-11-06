@@ -22,8 +22,6 @@ body {
   transition: all 0.5s ease;
 }
 
-/* Hover effect for .main */
-
 /* Text style inside .main */
 .main p {
   color: #333;
