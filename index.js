@@ -95,9 +95,9 @@ app.get("/", home);
 app.get("/about", about);
 app.get("/portfolio", portfolio);
 app.get("/contact", contact);
-app.get("/wedding", wedding);
-app.get("/birthday", birthday);
-app.get("/event", event);
+app.get("/portfolio/wedding", wedding);
+app.get("/portfolio/birthday", birthday);
+app.get("/portfolio/event", event);
 
 // Middleware untuk rute yang tidak ditemukan
 app.use(notFound);
