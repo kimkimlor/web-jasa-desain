@@ -135,39 +135,3 @@ li {
   border-radius: 10px;
   transition: transform 0.5s ease;
 }
-.intro:hover {
-  transform: scale(1.05);
-  z-index: 100;
-}
-
-.sample-utma {
-  position: relative;
-  display: inline-block; /* Agar gambar tetap dalam kontainer */
-}
-.sample-utma::before,
-.sample-utma::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.142
-  ); /* Pembatas transparan dengan sedikit warna */
-  z-index: 1; /* Menjaga pembatas di atas gambar */
-  width: 100%;
-}
-
-/* Pembatas atas dengan jarak */
-.sample-utma::before {
-  top: -10px; /* Jarak dari atas gambar */
-  height: 2px; /* Tinggi pembatas atas */
-}
-
-/* Pembatas bawah dengan jarak */
-.sample-utma::after {
-  bottom: -10px; /* Jarak dari bawah gambar */
-  height: 2px; /* Tinggi pembatas bawah */
-}
